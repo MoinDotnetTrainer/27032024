@@ -24,12 +24,18 @@ namespace ConsoleAppGit27032024
             {
                 Console.WriteLine(ex.Message);
             }*/
+
+            /*
             MultiThread obj = new MultiThread();
 
             Thread t1 = new Thread(obj.m1);
            Thread t2 = new Thread(obj.m2);
             t1.Start();
             t2.Start();
+            */
+
+            WordCountWithOutAsync obj = new WordCountWithOutAsync();
+            obj.callmethod();
           
 
 
