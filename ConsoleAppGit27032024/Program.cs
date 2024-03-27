@@ -34,8 +34,16 @@ namespace ConsoleAppGit27032024
             t2.Start();
             */
 
-            WordCountWithOutAsync obj = new WordCountWithOutAsync();
-            obj.callmethod();
+            // WordCountWithOutAsync obj = new WordCountWithOutAsync();
+            //obj.callmethod();
+
+
+            AsyncAwaitEx obj = new AsyncAwaitEx();
+
+            Task task = new Task(obj.callmethod);
+            task.Start();
+            task.Wait();
+            Console.ReadLine();
           
 
 
