@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleAppGit27032024
@@ -10,7 +11,7 @@ namespace ConsoleAppGit27032024
     {
         static void Main(string[] args)
         {
-            try
+            /*try
             {
                 Propexample obj = new Propexample();
 
@@ -22,8 +23,16 @@ namespace ConsoleAppGit27032024
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }
-         
+            }*/
+            MultiThread obj = new MultiThread();
+
+            Thread t1 = new Thread(obj.m1);
+           Thread t2 = new Thread(obj.m2);
+            t1.Start();
+            t2.Start();
+          
+
+
         }
     }
 }
